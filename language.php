@@ -8,7 +8,13 @@
         <h1>Hello World 2<h1>
 <?php
 
-$sql = "SELECT country.Name from country";
+$var_lang = $_REQUEST['lang'];
+$sql = sprintf('
+SELECT country.Name FROM country
+JOIN countrylanguage ON country.Code = countrylanguage.CountryCode
+WHERE countrylanguage.Language = "%s"
+', $var_lang);
+
 $result = $db->query($sql);
 
 if ($result->num_rows > 0) {
@@ -16,7 +22,7 @@ if ($result->num_rows > 0) {
         $name = $row["Name"];
         echo
         '<div class="country">'.
-            '<a href="#'.name.'" class="name">'.$name.'</a>'.
+            '<a href="#'.$name.'" class="name">'.$name.'</a>'.
         '</div>';
     }
 } else {
