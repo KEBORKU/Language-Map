@@ -3,7 +3,7 @@
 require 'connect.php'; 
 
 // get lang var
-$var_lang = $_REQUEST['lang'];
+$var_countries = $_REQUEST['countries'];
 ?>
 <!doctype html>
 <html lang="en">
@@ -11,15 +11,15 @@ $var_lang = $_REQUEST['lang'];
         <title>Languages of the World</title>
     </head>
     <body>
-        <h1>Countries who speak <?php $var_lang ?> <h1>
+        <h1>Languages that this country speaks <h1>
 <?php
 
 // get countries that use the lang var given
 $sql = sprintf('
-SELECT country.Name FROM country
-JOIN countrylanguage ON country.Code = countrylanguage.CountryCode
-WHERE countrylanguage.Language = "%s"
-', $var_lang); // String
+SELECT countrylanguage.Language FROM countrylanguage
+JOIN country ON country.Code = countrylanguage.CountryCode
+WHERE country.Name= "%s"
+', $var_countries); // String
 $result = $db->query($sql);
 
 if ($result->num_rows > 0) {
@@ -27,7 +27,7 @@ if ($result->num_rows > 0) {
         $name = $row["Name"];
         echo
         '<div class="country">'.
-            '<a href="country.php?countries='.$name.'" class="name">'.$name.'</a>'.
+            '<a href="countries.php?=lang'.$name.'" class="name">'.$name.'</a>'.
         '</div>';
     }
 } else {
