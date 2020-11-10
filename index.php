@@ -1,4 +1,7 @@
-<?php require 'connect.php'; ?>
+<?php 
+// GET DATABASE
+require 'connect.php'; 
+?>
 <!doctype html>
 <html lang="en">
     <head>
@@ -8,10 +11,12 @@
         <h1>Languages<h1>
 <?php
 
-$sql = "SELECT countrylanguage.Language from countrylanguage";
+// Get all unique langs
+$sql = "SELECT DISTINCT countrylanguage.Language from countrylanguage";
 $result = $db->query($sql);
 
 if ($result->num_rows > 0) {
+    // for each lang it makes a link 
     while($row = $result->fetch_array()) {
         $name = $row["Language"];
         echo
