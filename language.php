@@ -8,15 +8,15 @@
         <h1>Hello World 2<h1>
 <?php
 
-$sql = "SELECT countrylanguage.Language from countrylanguage";
+$sql = "SELECT country.Name from country";
 $result = $db->query($sql);
 
 if ($result->num_rows > 0) {
     while($row = $result->fetch_array()) {
-        $name = $row["Language"];
+        $name = $row["Name"];
         echo
         '<div class="country">'.
-            '<a href="language.php?='.name.'" class="name">'.$name.'</a>'.
+            '<a href="#'.name.'" class="name">'.$name.'</a>'.
         '</div>';
     }
 } else {
