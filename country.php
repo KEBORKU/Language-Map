@@ -24,7 +24,7 @@ $result = $db->query($sql);
 
 if ($result->num_rows > 0) {
     while($row = $result->fetch_array()) {
-        $name = $row["Name"];
+        $name = $row["Language"];
         echo
         '<div class="country">'.
             '<a href="countries.php?=lang'.$name.'" class="name">'.$name.'</a>'.
