@@ -27,7 +27,7 @@ if ($result->num_rows > 0) {
         $name = $row["Language"];
         echo
         '<div class="country">'.
-            '<a href="countries.php?=lang'.$name.'" class="name">'.$name.'</a>'.
+            '<a href="countries.php?lang='.$name.'" class="name">'.$name.'</a>'.
         '</div>';
     }
 } else {
