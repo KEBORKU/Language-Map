@@ -8,12 +8,12 @@
         <h1>Hello World 2<h1>
 <?php
 
-$sql = "SELECT country.Name from country";
+$sql = "SELECT countrylanguage.Language from countrylanguage";
 $result = $db->query($sql);
 
 if ($result->num_rows > 0) {
     while($row = $result->fetch_array()) {
-        $name = $row["Name"];
+        $name = $row["Language"];
         echo
         '<div class="country">'.
             '<div class="name">'.$name.'</div>'.
