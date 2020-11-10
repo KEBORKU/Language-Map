@@ -5,7 +5,7 @@
         <title>Languages of the World</title>
     </head>
     <body>
-        <h1>Hello World 2<h1>
+        <h1>Languages<h1>
 <?php
 
 $sql = "SELECT countrylanguage.Language from countrylanguage";
@@ -16,7 +16,7 @@ if ($result->num_rows > 0) {
         $name = $row["Language"];
         echo
         '<div class="country">'.
-            '<a href="language.php?lang='.$name.'" class="name">'.$name.'</a>'.
+            '<a href="countries.php?lang='.$name.'" class="name">'.$name.'</a>'.
         '</div>';
     }
 } else {

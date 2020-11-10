@@ -1,14 +1,17 @@
-<?php require 'connect.php'; ?>
+<?php 
+require 'connect.php'; 
+$var_lang = $_REQUEST['lang'];
+?>
 <!doctype html>
 <html lang="en">
     <head>
         <title>Languages of the World</title>
     </head>
     <body>
-        <h1>Hello World 2<h1>
+        <h1>Countries who speak <?php $var_lang ?> <h1>
 <?php
 
-$var_lang = $_REQUEST['lang'];
+
 $sql = sprintf('
 SELECT country.Name FROM country
 JOIN countrylanguage ON country.Code = countrylanguage.CountryCode
