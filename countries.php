@@ -12,6 +12,8 @@ $var_lang = $_REQUEST['lang'];
     </head>
     <body>
         <h1>Countries who speak <?php $var_lang ?> <h1>
+        <!-- Return to hompage button -->
+        <a href="/">Home</a>
 <?php
 
 // get countries that use the lang var given

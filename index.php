@@ -9,6 +9,7 @@ require 'connect.php';
     </head>
     <body>
         <h1>Languages<h1>
+
 <?php
 
 // Get all unique langs
