@@ -12,7 +12,7 @@ $var_countries = $_REQUEST['countries'];
     </head>
     <body>
         <h1>Languages that this country speaks <h1>
-        <a href="/">Home</a>
+        <a href="/Language-Map">Home</a>
 <?php
 
 // get countries that use the lang var given
