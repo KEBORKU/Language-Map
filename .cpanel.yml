@@ -1,0 +1,6 @@
+---
+deployment:
+ tasks:
+ - export DEPLOYPATH=/home/ixd579/public_html/Language-Map
+ - mkdir -p $DEPLOYPATH
+ - cp -R * $DEPLOYPATH
