@@ -3,8 +3,6 @@
 require 'connect.php'; 
 require 'layout.php'; 
 
-
-
 // Get all unique langs
 $sql = "SELECT DISTINCT countrylanguage.Language from countrylanguage";
 $result = $db->query($sql);
