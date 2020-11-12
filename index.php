@@ -19,7 +19,7 @@ if ($result->num_rows > 0) {
 
 $db->close();
 
-$layout = Layout('Languages', $items);
+$layout = new Layout('Languages', $items);
 $layout.show();
 
 ?>
