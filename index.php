@@ -1,7 +1,10 @@
 <?php 
+
+include 'classes/Layout.php';
+
 // GET DATABASE
 require 'connect.php'; 
-include 'Layout.php'; 
+
 
 // Get all unique langs
 $sql = "SELECT DISTINCT countrylanguage.Language from countrylanguage";
