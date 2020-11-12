@@ -1,9 +1,10 @@
 <?php
 
 class Layout {
-    function __construct($title, $items) {
+    function __construct($title, $items, $to_page) {
         $this->title = $title;
         $this->items = $items;
+        $this->to_page = $to_page;
     }
 
     function show() {
@@ -34,8 +35,8 @@ class Layout {
         if (count($this->items) > 0) {
             // for each item it makes a link 
             foreach($this->items as $name) {
-                echo '  <div class="country">';
-                echo '      <a href="countries.php?lang='.$name.'" class="name">'.$name.'</a>';
+                echo '  <div>';
+                echo '      <a href="'.$this->to_page.'?lang='.$name.'" class="name">'.$name.'</a>';
                 echo '  </div>';
             }
         } else {

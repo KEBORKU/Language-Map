@@ -4,7 +4,7 @@ require 'connect.php';
 include 'classes/Layout.php';
 
 // get lang var
-$var_countries = $_REQUEST['countries'];
+$var_countries = $_REQUEST['lang'];
 
 // get countries that use the lang var given
 $sql = sprintf('
@@ -25,7 +25,7 @@ if ($result->num_rows > 0) {
 
 $db->close();
 
-$my_page = new Layout("Languages", $items);
+$my_page = new Layout("Languages", $items, "countries.php");
 $my_page->show();
 
 ?>
