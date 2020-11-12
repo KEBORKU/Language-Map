@@ -30,7 +30,7 @@ class Layout {
         echo '  </body>';
     }
 
-    function list() {
+    function item_list() {
         if (count($this->items) > 0) {
             // for each item it makes a link 
             // foreach($this->items as $name) {
