@@ -4,7 +4,7 @@ require 'connect.php';
 include 'Layout.php';
 
 // Get all unique langs
-$sql = "SELECT DISTINCT countrylanguage.Language from countrylanguage";
+$sql = "SELECT DISTINCT countrylanguage.Language from countrylanguage ORDER BY countrylanguage.Language;";
 $result = $db->query($sql);
 
 $items = array();

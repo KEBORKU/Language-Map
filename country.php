@@ -11,6 +11,7 @@ $sql = sprintf('
 SELECT countrylanguage.Language FROM countrylanguage
 JOIN country ON country.Code = countrylanguage.CountryCode
 WHERE country.Name= "%s"
+ORDER BY countrylanguage.Language;
 ', $var_countries); // String
 $result = $db->query($sql);
 
