@@ -1,7 +1,7 @@
 <?php 
 // GET DATABASE
 require 'connect.php'; 
-include 'classes/Layout.php';
+include 'Layout.php';
 
 // get lang var
 $var_countries = $_REQUEST['lang'];
