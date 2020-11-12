@@ -30,18 +30,19 @@ class Layout {
         echo '  </body>';
     }
 
-    // function list() {
-    //     if (count($this->items) > 0) {
-    //         // for each item it makes a link 
-    //         foreach($this->items as $name) {
-    //             echo '  <div class="country">';
-    //             echo '      <a href="countries.php?lang='.$name.'" class="name">'.$name.'</a>';
-    //             echo '  </div>';
-    //         }
-    //     } else {
-    //         echo "<p>Nothing to show</p>";
-    //     }
-    // }
+    function list() {
+        if (count($this->items) > 0) {
+            // for each item it makes a link 
+            // foreach($this->items as $name) {
+            //     echo '  <div class="country">';
+            //     echo '      <a href="countries.php?lang='.$name.'" class="name">'.$name.'</a>';
+            //     echo '  </div>';
+            // }
+            echo "<p>Somthing to show</p>";
+        } else {
+            echo "<p>Nothing to show</p>";
+        }
+    }
 
 }
 
