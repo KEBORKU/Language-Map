@@ -36,11 +36,13 @@ class Layout {
     function item_list() {
         if (count($this->items) > 0) {
             // for each item it makes a link 
+            echo '<ul class="list-group">';
             foreach($this->items as $name) {
-                echo '  <div>';
+                echo '  <li class="list-group-item">';
                 echo '      <a href="'.$this->to_page.'?lang='.$name.'" class="name">'.$name.'</a>';
-                echo '  </div>';
+                echo '  </li>';
             }
+            echo '</ul>';
         } else {
             echo "<p>Nothing to show</p>";
         }
