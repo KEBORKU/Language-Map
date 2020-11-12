@@ -26,7 +26,7 @@ if ($result->num_rows > 0) {
 
 $db->close();
 
-$my_page = new Layout("Languages", $items, "country.php");
+$my_page = new Layout("Countries", $items, "country.php");
 $my_page->show();
 
 ?>
