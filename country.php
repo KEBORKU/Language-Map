@@ -1,19 +1,10 @@
 <?php 
 // GET DATABASE
 require 'connect.php'; 
+include 'classes/Layout.php';
 
 // get lang var
 $var_countries = $_REQUEST['countries'];
-?>
-<!doctype html>
-<html lang="en">
-    <head>
-        <title>Languages of the World</title>
-    </head>
-    <body>
-        <h1>Languages that this country speaks <h1>
-        <a href="/Language-Map">Home</a>
-<?php
 
 // get countries that use the lang var given
 $sql = sprintf('
@@ -23,20 +14,18 @@ WHERE country.Name= "%s"
 ', $var_countries); // String
 $result = $db->query($sql);
 
+$items = array();
+
 if ($result->num_rows > 0) {
     while($row = $result->fetch_array()) {
         $name = $row["Language"];
-        echo
-        '<div class="country">'.
-            '<a href="countries.php?lang='.$name.'" class="name">'.$name.'</a>'.
-        '</div>';
+        array_push($items, $name);
     }
-} else {
-    echo "<p>Nothing to show</p>";
 }
 
 $db->close();
 
+$my_page = new Layout("Languages", $items);
+$my_page->show();
+
 ?>
-    </body>
-</html>
