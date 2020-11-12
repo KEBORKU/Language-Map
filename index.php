@@ -1,7 +1,7 @@
 <?php 
 // GET DATABASE
 require 'connect.php'; 
-require 'layout.php';
+// require 'layout.php';
 
 
 // Get all unique langs
