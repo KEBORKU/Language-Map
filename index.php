@@ -35,7 +35,7 @@ class Layout {
     function list() {
         if (count($this->items) > 0) {
             // for each item it makes a link 
-            foreach($this->list as $name) {
+            foreach($this->items as $name) {
                 echo '  <div class="country">';
                 echo '      <a href="countries.php?lang='.$name.'" class="name">'.$name.'</a>';
                 echo '  </div>';
