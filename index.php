@@ -1,7 +1,7 @@
 <?php 
 // GET DATABASE
 require 'connect.php'; 
-// require 'layout.php';
+require 'layout.php';
 
 
 // Get all unique langs
@@ -10,18 +10,17 @@ $result = $db->query($sql);
 
 $items = array();
 
-if ($result->num_rows > 0) {
-    while($row = $result->fetch_array()) {
-        $name = $row["Language"];
-        array_push($items, $name);
-    }
-}
+// if ($result->num_rows > 0) {
+//     while($row = $result->fetch_array()) {
+//         $name = $row["Language"];
+//         array_push($items, $name);
+//     }
+// }
 
 $db->close();
 
-// $layout = new Layout('Languages', $items);
-// $layout.show();
+$layout = new Layout('Languages', $items);
+$layout.show();
 
-echo 'hello';
 
 ?>
