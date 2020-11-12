@@ -19,8 +19,8 @@ $items = array();
 
 $db->close();
 
-$layout = new Layout('Languages', $items);
-$layout.show();
+$my_page = new Layout("Languages", $items);
+$my_page.show();
 
 
 ?>
