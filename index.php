@@ -64,7 +64,7 @@ $items = array();
 $db->close();
 
 $my_page = new Layout("Languages", $items);
-$my_page.show();
+$my_page->show();
 
 
 ?>
